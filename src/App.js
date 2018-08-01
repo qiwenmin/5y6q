@@ -8,9 +8,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1>五运六气计算器</h1>
-        <Yunqi label="生日："/>
+        <Yunqi label="日期1：" defaultValue={new moment()}/>
         <br/>
-        <Yunqi label="参考：" defaultValue={new moment()}/>
+        <Yunqi label="日期2：" defaultValue={new moment()}/>
       </div>
     );
   }

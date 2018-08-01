@@ -31,14 +31,14 @@ class Yunqi extends React.Component {
 
             if (m === 1 && d <= 21) y--
 
-            var gan = (y % 10) - 4; if (gan < 0) gan += 10
+            var gan = (y - 4) % 10
             var zhi = (y + 6) % 12
 
             var ganzhi = gan_table[gan] + zhi_table[zhi]
             var zhuyun = wuxing_table[gan % 5]
             var yinyang = (gan % 2) === 0 ? '太过' : '不及'
 
-            var sitian = liuqi_table[(zhi +2 )% 6]
+            var sitian = liuqi_table[(zhi +2 ) % 6]
             var zaiquan = liuqi_table[(zhi + 5) % 6]
 
             var qiIndex = Math.floor((m - 1) / 2)
@@ -48,14 +48,18 @@ class Yunqi extends React.Component {
             var keqi = liuqi_table[(zhi + qiIndex) % 6]
 
             return (
-                <div>
-                    {ganzhi + '年 | 主运：' + zhuyun + '【' + yinyang + '】'}
+                <div className="qi-result">
+                    {ganzhi + '年'}
                     <br/>
-                    {'司天：' + sitian + ' | 在泉：' + zaiquan}
+                    {'主运：' + zhuyun + '运【' + yinyang + '】'}
                     <br/>
-                    {'主气：' + qi_n + '，' + zhuqi}
+                    {'司天：' + sitian}
+                    <br/>
+                    {'在泉：' + zaiquan}
                     <br/>
                     {'客气：' + qi_n + '，' + keqi}
+                    <br/>
+                    {'主气：' + qi_n + '，' + zhuqi}
                 </div>
             )
         } else {
