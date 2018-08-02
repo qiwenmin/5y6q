@@ -47,9 +47,15 @@ class Yunqi extends React.Component {
             var zhuqi = qi_table[qiIndex]
             var keqi = liuqi_table[(zhi + qiIndex) % 6]
 
+            var summary = ganzhi + '年 ' + ((gan % 2) === 0 ? '大' : '小') + zhuyun
+            summary += ' ' + sitian.substring(2)
+            summary += ' ' + zaiquan.substring(2)
+            summary += ' ' + keqi.substring(2)
+            summary += ' ' + zhuqi.substring(2)
+
             return (
                 <div className="qi-result">
-                    {ganzhi + '年'}
+                    <span className="summary">{summary}</span>
                     <br/>
                     {'主运：' + zhuyun + '运【' + yinyang + '】'}
                     <br/>

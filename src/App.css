@@ -29,3 +29,16 @@
 .qi-result {
   margin-top: 10px;
 }
+
+.summary {
+  color: #000;
+  font-weight: bold;
+}
+
+#version {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  font-size: 0.8em;
+  color: #777;
+}

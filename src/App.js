@@ -10,7 +10,8 @@ class App extends Component {
         <h1>五运六气计算器</h1>
         <Yunqi label="日期1：" defaultValue={new moment()}/>
         <br/>
-        <Yunqi label="日期2：" defaultValue={new moment()}/>
+        <Yunqi label="日期2："/>
+        <div id="version">v.3</div>
       </div>
     );
   }
