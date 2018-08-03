@@ -78,8 +78,8 @@ class Yunqi extends React.Component {
         return (
             <div>
                 <div>
-                    <label htmlFor="birth">{this.props.label}</label>
-                    <DatePicker id="birth" defaultValue={this.props.defaultValue} onChange={(date, dateString) => this.changeDate(date)}></DatePicker>
+                    <label>{this.props.label}</label>
+                    <DatePicker defaultValue={this.props.defaultValue} onChange={(date, dateString) => this.changeDate(date)}></DatePicker>
                 </div>
                 <div>
                     {this.renderResult()}
