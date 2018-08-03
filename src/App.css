@@ -43,12 +43,16 @@
   font-size: 24px;
 }
 
-.ant-notification-notice-message {
-  font-size: 20px;
+.ant-drawer-title {
+  font-size: 24px;
 }
 
-.ant-notification-notice-description {
+.ant-drawer-body {
   font-size: 16px;
+}
+
+.ant-drawer-body li {
+  margin-left: -16px;
 }
 
 #version {
