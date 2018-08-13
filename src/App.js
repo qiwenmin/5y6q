@@ -5,18 +5,18 @@ import Yunqi from './yunqi';
 import moment from 'moment';
 
 class App extends Component {
-  state = { readmeVisible: false }
+  state = { readmeVisible: false };
 
   showReadme = () => {
     this.setState({
       readmeVisible: true
-    })
+    });
   }
 
   onReadmeClose = () => {
     this.setState({
       readmeVisible: false
-    })
+    });
   }
 
   render() {
@@ -45,7 +45,7 @@ class App extends Component {
             <li>对于经常使用本工具的用户，可在手机桌面建立浏览地址快捷入口。</li>
           </ul>
         </Drawer>
-        <div id="version">v.5</div>
+        <div id="version">v.6</div>
       </div>
     );
   }
